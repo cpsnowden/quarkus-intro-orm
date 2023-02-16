@@ -13,7 +13,14 @@
 ## Customer
 
 - Uses JPA
+  - Use Entity Manager
 
 ## Vintage-Store
 
 - Uses Panache
+- Build on-top of JPA
+- Simplifies JPA entities and repositories
+  - Public attributes
+  - Optional getter/setters
+  - Generated ID
+  - Inherit all crud
