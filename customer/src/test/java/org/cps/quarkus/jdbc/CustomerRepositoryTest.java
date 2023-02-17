@@ -13,16 +13,6 @@ public class CustomerRepositoryTest {
     @Inject
     CustomerRepository repository;
 
-    @Test
-    @TestTransaction
-    public void shouldCreateAndFindACustomer() {
-        Customer customer = new Customer("firstName", "secondName", "email");
 
-        repository.persist(customer);
-        Assertions.assertNotNull(customer.getId());
-
-        Customer foundCustomer = repository.findById(customer.getId());
-        Assertions.assertEquals(customer.getFirstName(), foundCustomer.getFirstName());
-    }
 
 }

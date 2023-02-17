@@ -1,7 +1,8 @@
-package org.cps.quarkus.jdbc;
+package org.cps.quarkus.jdbc.repository;
 
 import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
+import org.cps.quarkus.jdbc.model.Publisher;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

@@ -1,6 +1,7 @@
-package org.cps.quarkus.jdbc;
+package org.cps.quarkus.jdbc.respository;
 
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
+import org.cps.quarkus.jdbc.model.PublisherAlt;
 
 import javax.enterprise.context.ApplicationScoped;
 

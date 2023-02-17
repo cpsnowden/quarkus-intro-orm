@@ -5,17 +5,15 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
 @ApplicationScoped
-public class CustomerRepository implements ICustomerRepository {
+public class CustomerRepository {
 
     @Inject
     EntityManager em;
 
-    @Override
     public void persist(Customer customer) {
         em.persist(customer);
     }
 
-    @Override
     public Customer findById(Long id) {
         return em.find(Customer.class, id);
     }

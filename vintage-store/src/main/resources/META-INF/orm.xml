@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="2.0">
+    <entity class="org.cps.quarkus.jdbc.Artist">
+        <table name="t_artist"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="AUTO"/>
+            </id>
+        </attributes>
+    </entity>
+</entity-mappings>
