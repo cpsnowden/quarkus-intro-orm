@@ -3,9 +3,11 @@ package org.cps.quarkus.jdbc.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.Instant;
 
 @Entity
+@Table(name="t_publisher_alt")
 public class PublisherAlt {
 
     @Id

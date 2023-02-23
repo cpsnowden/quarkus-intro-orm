@@ -1,4 +1,4 @@
-package org.cps.quarkus.jdbc.respository;
+package org.cps.quarkus.jdbc.repository;
 
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 import org.cps.quarkus.jdbc.Customer;
