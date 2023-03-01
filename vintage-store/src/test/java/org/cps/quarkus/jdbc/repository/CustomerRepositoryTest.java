@@ -17,6 +17,9 @@ public class CustomerRepositoryTest {
     @Test
     @TestTransaction
     public void shouldCreateAndFindACustomer() {
+
+        Assertions.assertTrue(repository.listAllDans().size() <= repository.count());
+
         Customer customer = new Customer("firstName", "secondName", "email");
 
         repository.persist(customer);

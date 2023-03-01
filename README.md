@@ -80,6 +80,32 @@ quarkus create app --package-name=org.cps.quarkus.jdbc --extension=jdbc-postgres
 - Single table per class hierarchy
 - Join subclass strategy
 - Table per concrete entity class
+- This is controlled via `@Inheritance(InheritanceType.SINGLE_TABLE|JOINED|TABLE_PER_CLASS)`
 
-`@Inheritance(InheritanceType.SINGLE_TABLE|JOINED|TABLE_PER_CLASS)`
+## Queries
 
+### JPQL
+
+Simplified SQL that runs against objects and selects attributes (rather than tables and columns)
+
+```
+SELECT c
+FROM Customer c
+WHERE c.firstName = 'Dan'
+ORDER BY c.lastName DESC
+```
+
+- Entity Manager
+
+```aidl
+//Untyped Query
+em.createQuery("SELECT c FROM Customer c WHERE c.firstName= :pname ORDER BY c.lastName DESC")
+  .setParameter(1, name)
+
+//Typed Query
+em.createQuery("...", Customer.class)
+```
+
+- Query
+- TypedQuery
+- PanacheQuery
