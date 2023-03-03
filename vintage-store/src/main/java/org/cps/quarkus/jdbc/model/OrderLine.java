@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "t_purchase_order_line")
+@Table(name = "t_purchase_order_lines")
 public class OrderLine extends PanacheEntity {
 
     @ManyToOne

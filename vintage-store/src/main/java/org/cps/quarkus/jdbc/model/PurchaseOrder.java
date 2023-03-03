@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "t_purchase_order")
+@Table(name = "t_purchase_orders")
 public class PurchaseOrder extends PanacheEntity {
     @Column(name="purchase_order_date", nullable = false)
     public LocalDate date = LocalDate.now();
