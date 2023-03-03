@@ -1,6 +1,6 @@
 ## Project Structure
 
-### Notes
+#### Notes
 - Boostrap 3 quarkus applications
   - MySQL - Using Pojo
   - MariaDB - Using Entity JPA Entity
@@ -12,7 +12,7 @@
 - Postgres using Test Containers
 - Postgres using Docker for Production
 
-### Artist Module
+#### Artist Module
 
 - Uses Plain Old Java Object
 - Access MSQL DB via JDBC/DataSource
@@ -21,11 +21,11 @@
 - quarkus.datasource.jdbc.new-connection-sql
 - Quarkus configures the data source automatically
 
-## Customer Module
+#### Customer Module
 
 - Uses JPA and Entity Manager
 
-## Vintage-Store Module
+#### Vintage-Store Module
 
 - Uses Panache
 - Build on-top of JPA
@@ -203,3 +203,9 @@ public static Optional<Publisher> findByName(String name) {
     return Publisher.find("name", name).firstResultOptional();
 }
 ```
+
+## Transactions
+
+Use the annotation `@Transactional`
+
+Call http://localhost:8080/q/swagger-ui/
