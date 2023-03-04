@@ -1,0 +1,29 @@
+{#include base.html}
+{#title}Books{/title}
+{#body}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Isbn</th>
+            <th scope="col">N of Pages</th>
+            <th scope="col">Publication Date</th>
+            <th scope="col">Language</th>
+        </tr>
+    </thead>
+    <tbody>
+        {#for book in books}
+        <tr>
+            <th scope="row">{book.id}</th>
+            <th scope="row">{book.title}</th>
+            <th scope="row">{book.isbn}</th>
+            <th scope="row">{book.nbOfPages}</th>
+            <th scope="row">{book.publicationDate}</th>
+            <th scope="row">{book.language}</th>
+        </tr>
+        {/for}
+    </tbody>
+</table>
+{/body}
+{/include}

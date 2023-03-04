@@ -1,7 +1,7 @@
 create sequence hibernate_sequence start 1 increment 1;
 create table t_artists (id int8 not null, bio varchar(3000), created_date timestamp not null, name varchar(100) not null, primary key (id));
 create table t_customers (id int8 not null, created_date timestamp not null, e_mail varchar(255) not null, first_name varchar(50) not null, last_name varchar(50) not null, primary key (id));
-create table t_items (DTYPE varchar(31) not null, id int8 not null, created_date timestamp not null, description varchar(3000), price numeric(19, 2) not null, title varchar(100) not null, isbn varchar(15), language varchar(255), nb_of_pages int4, publication_date date, genre varchar(100), music_company varchar(255), artist_fk int8, publisher_fk int8, primary key (id));
+create table t_items (DTYPE varchar(31) not null, id int8 not null, created_date timestamp not null, description varchar(3000), price numeric(19, 2) not null, title varchar(100) not null, genre varchar(100), music_company varchar(255), isbn varchar(15), language varchar(255), nb_of_pages int4, publication_date date, artist_fk int8, publisher_fk int8, primary key (id));
 create table t_publisher_alt (id int8 not null, createdDate timestamp, name varchar(255), primary key (id));
 create table t_publishers (id int8 not null, created_date timestamp not null, name varchar(50) not null, primary key (id));
 create table t_purchase_order_lines (id int8 not null, created_date date not null, quantity int4 not null, item_fk int8, purchase_order_fk int8, primary key (id));
