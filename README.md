@@ -1,7 +1,7 @@
 ## Project Structure
 
 ```
-$ quarkus:dev
+$ quarkus dev
 [//]: # (http://localhost:8080/q/swagger-ui/)
 ```
 
