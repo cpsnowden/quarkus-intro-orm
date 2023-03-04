@@ -1,5 +1,7 @@
 ## Project Structure
 
+Based on https://www.udemy.com/course/quarkus-accessing-relational-databases-with-quarkus/learn/lecture/27225826
+
 ```
 $ quarkus dev
 [//]: # (http://localhost:8080/q/swagger-ui/)
