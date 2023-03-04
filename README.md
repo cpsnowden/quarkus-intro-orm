@@ -1,5 +1,10 @@
 ## Project Structure
 
+```
+$ quarkus:dev
+[//]: # (http://localhost:8080/q/swagger-ui/)
+```
+
 #### Notes
 - Boostrap 3 quarkus applications
   - MySQL - Using Pojo
@@ -208,4 +213,10 @@ public static Optional<Publisher> findByName(String name) {
 
 Use the annotation `@Transactional`
 
-Call http://localhost:8080/q/swagger-ui/
+# Docker Prod
+
+```bash
+$ docker compose -f vintage-store/vintagestore_database.yaml up
+$ mvn package
+$ java -jar vintage-store/target/quarkus-app/quarkus-run.jar
+```

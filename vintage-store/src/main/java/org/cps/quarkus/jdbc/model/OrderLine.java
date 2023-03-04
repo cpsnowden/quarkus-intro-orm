@@ -3,6 +3,7 @@ package org.cps.quarkus.jdbc.model;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 import javax.persistence.*;
+import java.time.Instant;
 import java.time.LocalDate;
 
 @Entity
@@ -18,5 +19,5 @@ public class OrderLine extends PanacheEntity {
     @JoinColumn(name = "purchase_order_fk")
     public PurchaseOrder purchaseOrder;
     @Column(name = "created_date", nullable = false)
-    public LocalDate createdDate = LocalDate.now();
+    public Instant createdDate = Instant.now();
 }

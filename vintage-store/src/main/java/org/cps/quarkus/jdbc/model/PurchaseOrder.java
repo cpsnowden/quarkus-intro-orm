@@ -4,6 +4,7 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import org.cps.quarkus.jdbc.Customer;
 
 import javax.persistence.*;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ public class PurchaseOrder extends PanacheEntity {
     @JoinColumn(name = "customer_fk")
     public Customer customer;
     @Column(name = "created_date", nullable = false)
-    public LocalDate createdDate = LocalDate.now();
+    public Instant createdDate = Instant.now();
 
     public void addOrderLine(OrderLine orderLine) {
         orderLines.add(orderLine);
